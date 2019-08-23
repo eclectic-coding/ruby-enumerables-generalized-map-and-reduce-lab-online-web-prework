@@ -9,3 +9,15 @@ def my_own_map(set)
   end
   new 
 end
+
+
+def reduce(set, sp=nil)
+  if sp 
+    accum = sp
+    i = 0 
+  else 
+    accum = yeild(accum, set[i])
+    i += 1 
+  end 
+  accum 
+end 
