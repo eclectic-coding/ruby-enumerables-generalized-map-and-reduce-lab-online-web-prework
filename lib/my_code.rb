@@ -12,16 +12,16 @@ end
 
 
 def reduce(set, sp=nil)
-  if sp 
+  if sp
     accum = sp
-    i = 0 
-  else 
+    i = 0
+  else
     accum = set[0]
-    i += 1 
+    i = 1
   end
-  while i < s.length 
-    accum = yield(accum, set[1])
-    i += 1 
-  end 
+  while i < set.length
+    accum = yield(accum, set[i])
+    i += 1
+  end
   accum
-end 
+end
